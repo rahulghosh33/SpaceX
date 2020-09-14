@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MissionCardComponent } from './mission-card.component';
+import { MissionCardComponent } from './project-list.component';
 
 describe('MissionCardComponent', () => {
   let component: MissionCardComponent;

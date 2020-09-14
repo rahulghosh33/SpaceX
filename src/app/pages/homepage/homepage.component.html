@@ -1,0 +1,14 @@
+<div class="container-fluid ">
+    <app-header></app-header>
+    <div class="row">
+        <div class="col-sm-3">
+            <app-filter (selectedFilters)='filtersChanged($event)'></app-filter>
+        </div>
+        <div class="col-sm-9">
+            <ngTemplate *ngIf='stateDataReady'>
+                <app-project-list [projectData]='projectList'></app-project-list>
+            </ngTemplate>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>
