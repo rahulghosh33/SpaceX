@@ -49,7 +49,7 @@ Responsive Functionalities maintained as per requirement.
 
 ## Lighthouse
 
-![Tablet](https://tinyurl.com/y5b8abm5)
+![Lighthouse](https://www.awesomescreenshot.com/image/5359403/c9ff8e41a5414c5651a3a7dc61a9a7cd)
 
 
 
