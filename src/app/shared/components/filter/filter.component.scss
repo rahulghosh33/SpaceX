@@ -1,9 +1,13 @@
 .filter-container {
     padding: 15px;
     background: #fff;
+    margin-bottom: 20px;
 }
 .filter-panel {
-    margin: 0 0 30px;
+    margin: 0 0 20px;
+    &.mb-0 {
+        margin-bottom: 0;
+    }
     h4 {
         text-align: center;
         font-size: 13px;
