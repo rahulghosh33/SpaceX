@@ -1,27 +1,55 @@
 # SpaceX
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.
+## Development server
+
+Project Installation - `npm install`
+
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+`ng serve` - Local dev server on `http://localhost:4200`
+`npm start` - Start Server Side Rendering on local dev server on `http://localhost:4000`
+`npm run build` - Product Build Server Side Rendering
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Live Demo
 
-## Build
+Application hosted on Heroku with CI/ CD Pipleline
+`https://space-xlaunches.herokuapp.com/`
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Features
 
-## Running unit tests
+### Server Side Rendered
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Application loads from Server with all data from API. 
 
-## Running end-to-end tests
+Changing filters changes the url search parameters. 
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Data is fetched according to search parameters from API and displayed without page refresh.
 
-## Further help
+If User refreshes the page with search parameters, the page gets rendered from Server Side.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+### Responsive
+
+Responsive Functionalities maintained as per requirement.
+
+
+## Desktop
+
+![Desktop](https://tinyurl.com/y5rlqfoz)
+
+## Mobile
+
+![Mobile](https://tinyurl.com/yxzlkay2)
+![Mobile](https://tinyurl.com/y6aea9wn)
+
+## Tablet
+
+![Tablet](https://tinyurl.com/y6ffleo9)
+
+## Lighthouse
+
+![Tablet](https://tinyurl.com/y5b8abm5)
+
+
+
