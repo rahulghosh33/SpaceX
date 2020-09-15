@@ -1,46 +1,39 @@
-<h3 class="filter-header">Filters</h3>
-<div class="filter-panel">
-    <h4>Launch Year</h4>
-    <div>
-        <label class="btn btn-primary" [class.active]="year.active" *ngFor="let year of yearList; index as i;">
-            <input 
-                type="radio" 
-                name="year" 
-                [id]="'year' + i" 
-                [checked]="year.active"
-                (change)="onFilterChange('year', year, $event)"> 
-                {{year.value}}
-            <!-- <input type="checkbox" name="year" autocomplete="off" > {{year.value}} -->
-        </label>
+<div class="filter-container">
+    <h3 class="filter-header">Filters</h3>
+    <div class="filter-panel">
+        <h4>Launch Year</h4>
+        <div class="row">
+            <div class="col-6" *ngFor="let year of yearList; index as i;">
+                <label class="btn btn-success btn-block btn-sm" [class.active]="year.active">
+                    <input type="radio" name="year" [id]="'year' + i" [checked]="year.active"
+                        (change)="onFilterChange('year', year, $event)">
+                    {{year.value}}
+                </label>
+            </div>
+        </div>
     </div>
-</div>
-<div class="filter-panel">
-    <h4>Successful Launch</h4>
-    <div>
-        <label class="btn btn-primary" [class.active]="launch.active" *ngFor="let launch of launchList; index as i;">
-            <input 
-                type="radio" 
-                name="launch" 
-                [id]="'launch' + i" 
-                [checked]="launch.active"
-                (change)="onFilterChange('launch', launch, $event)"> 
-                {{launch.value}}
-            <!-- <input type="checkbox" name="year" autocomplete="off" > {{year.value}} -->
-        </label>
+    <div class="filter-panel">
+        <h4>Successful Launch</h4>
+        <div class="row">
+            <div class="col-6" *ngFor="let launch of launchList; index as i;">
+                <label class="btn btn-success btn-block btn-sm" [class.active]="launch.active">
+                    <input type="radio" name="launch" [id]="'launch' + i" [checked]="launch.active"
+                        (change)="onFilterChange('launch', launch, $event)">
+                    {{launch.value}}
+                </label>
+            </div>
+        </div>
     </div>
-</div>
-<div class="filter-panel">
-    <h4>Successful Landing</h4>
-    <div>
-        <label class="btn btn-primary" [class.active]="landing.active" *ngFor="let landing of landingList; index as i;">
-            <input 
-                type="radio" 
-                name="landing" 
-                [id]="'landing' + i" 
-                [checked]="landing.active"
-                (change)="onFilterChange('landing', landing, $event)"> 
-                {{landing.value}}
-            <!-- <input type="checkbox" name="year" autocomplete="off" > {{year.value}} -->
-        </label>
+    <div class="filter-panel">
+        <h4>Successful Landing</h4>
+        <div class="row">
+            <div class="col-6" *ngFor="let landing of landingList; index as i;">
+                <label class="btn btn-success btn-block btn-sm" [class.active]="landing.active">
+                    <input type="radio" name="landing" [id]="'landing' + i" [checked]="landing.active"
+                        (change)="onFilterChange('landing', landing, $event)">
+                    {{landing.value}}
+                </label>
+            </div>
+        </div>
     </div>
 </div>

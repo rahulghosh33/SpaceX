@@ -26,5 +26,5 @@ export interface Project {
 }
 
 export interface ProjectList {
-    projectList : [Project]
+    projectList: [Project];
 }

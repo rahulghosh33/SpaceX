@@ -1,0 +1,40 @@
+.project-card {
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+    height: 340px;
+    margin-bottom: 15px;
+    .card-img-container {
+        margin: 15px 15px 0;
+        text-align: center;
+        background: #f8f8f8;
+        .card-img-top {
+            height: 150px;
+            width: auto;
+        }
+    }
+    .card-body {
+        padding: 15px;
+        .card-title {
+            color: #272f86;
+            font-size: 16px;
+        }
+        .list-title, p {
+            font-size: 14px;
+            margin-bottom: 3px;
+        }
+        p {
+            color: #272f86;
+            span {
+                color: #000;
+                font-weight: bold;
+            }
+        }
+        .list-items {
+            padding-left: 25px;
+            color: #272f86;
+            font-size: 13px;
+            margin-bottom: 8px;
+        }
+    }
+}

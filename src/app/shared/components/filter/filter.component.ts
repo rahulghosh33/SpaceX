@@ -50,13 +50,13 @@ export class FilterComponent implements OnInit {
     this.setDefaultFilter();
   }
 
-  setDefaultFilter() {
+  setDefaultFilter(): void {
     this.setActiveClass('year', this.filterParams.year, true);
     this.setActiveClass('launch', this.filterParams.launch, true);
     this.setActiveClass('landing', this.filterParams.land, true);
   }
 
-  onFilterChange(type, option, event) {
+  onFilterChange(type, option, event): void {
     if (event.target.checked) {
       this.setActiveClass(type, option.value, true);
     } else {
@@ -69,7 +69,7 @@ export class FilterComponent implements OnInit {
     });
   }
 
-  setActiveClass(type, val, checked) {
+  setActiveClass(type, val, checked): void {
     switch (type) {
       case 'year':
         const yearIndex = this.yearList.findIndex(x => x.value === val);

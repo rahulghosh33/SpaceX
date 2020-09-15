@@ -1,5 +1,39 @@
-// .filter-panel .btn input[type=radio] {
-//     position: absolute;
-//     clip: rect(0, 0, 0, 0);
-//     pointer-events: none;
-// }
+.filter-container {
+    padding: 15px;
+    background: #fff;
+}
+.filter-panel {
+    margin: 0 0 30px;
+    h4 {
+        text-align: center;
+        font-size: 13px;
+        padding: 0 0 5px;
+        border-bottom: 1px solid #333;
+        margin: 0 10px 20px;
+    }
+    .btn input[type=radio] {
+        position: absolute;
+        clip: rect(0, 0, 0, 0);
+        pointer-events: none;
+    }
+    .btn-success {
+        color: #fff;
+        background-color: #cbe79f;
+        border-color: #cbe79f;
+        font-size: .75rem;
+        color: #000;
+        border-radius: 5px;
+    }
+    .btn-success:not(:disabled):not(.disabled).active {
+        background-color: #7fbf00;
+        border-color: #7fbf00;
+    }
+    .btn-success:hover {
+        background-color: #629400;
+        border-color: #629400;
+    }
+}
+.filter-header {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+}

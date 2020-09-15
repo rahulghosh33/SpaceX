@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppConst } from './../../app.constants';
 
 @Component({
   selector: 'app-footer',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
+
+  developerName = AppConst.DEVELOPER_NAME;
 
   constructor() { }
 

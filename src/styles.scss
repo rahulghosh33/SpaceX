@@ -17,3 +17,7 @@ $container-max-widths: (
   xl: 1400px  // <-- modified!
 );
 @import '~bootstrap/scss/bootstrap';
+
+body {
+  background: #f8f8f8;
+}

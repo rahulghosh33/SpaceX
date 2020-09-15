@@ -16,13 +16,13 @@ export class HomepageComponent implements OnInit {
     launch: '',
     land: '',
     year: ''
-  }
+  };
 
   constructor(
     private route: ActivatedRoute,
     private router: Router,
     private apiService: ApiService
-  ) { 
+  ) {
     this.stateDataReady = false;
   }
 
@@ -33,21 +33,21 @@ export class HomepageComponent implements OnInit {
     });
   }
 
-  generateFilterParams(params) {
-    if (params['launch_success']) {
-      this.filterParams.launch = params['launch_success']
+  generateFilterParams(params): void {
+    if (params.launch_success) {
+      this.filterParams.launch = params.launch_success;
     }
-    if (params['land_success']) {
-      this.filterParams.land = params['land_success']
+    if (params.land_success) {
+      this.filterParams.land = params.land_success;
     }
-    if (params['launch_year']) {
-      this.filterParams.year = params['launch_year']
+    if (params.launch_year) {
+      this.filterParams.year = params.launch_year;
     }
     this.populateWithFilters(this.filterParams);
   }
 
-  populateWithFilters(filters) {
-    let filterOptions = ''
+  populateWithFilters(filters): void {
+    let filterOptions = '';
     let year = '';
     let land = '';
     let launch = '';
@@ -73,9 +73,9 @@ export class HomepageComponent implements OnInit {
     );
   }
 
-  filtersChanged(filters) {
+  filtersChanged(filters): void {
     console.log('filters Changed =>', filters);
-    let queryParams = {};
+    const queryParams = {};
     if (filters.year !== '') {
       queryParams['launch_year'] = filters.year;
     }
@@ -86,7 +86,7 @@ export class HomepageComponent implements OnInit {
       queryParams['launch_success'] = filters.launch;
     }
     console.log('queryParams =>', queryParams);
-    this.router.navigate([], { queryParams: queryParams });
+    this.router.navigate([], { queryParams });
   }
 
 

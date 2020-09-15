@@ -12,11 +12,11 @@ export class ApiService {
   constructor(
     private httpClient: HttpClient
   ) { }
-  
+
   getProjectsWithFilters(param): Observable<ProjectList> {
-		const request = {
-			'url': AppConst.API_BASE_URL + 'launches?limit=100' + param
+    const request = {
+      url: AppConst.API_BASE_URL + 'launches?limit=100' + param
     };
-		return this.httpClient.get<ProjectList>(request.url);
+    return this.httpClient.get<ProjectList>(request.url);
   }
 }
