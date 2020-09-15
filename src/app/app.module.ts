@@ -12,6 +12,7 @@ import { ProjectListComponent } from './shared/components/project-list/project-l
 import { FilterComponent } from './shared/components/filter/filter.component';
 
 import { ApiService } from './shared/services/api.service';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ApiService } from './shared/services/api.service';
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

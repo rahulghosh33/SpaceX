@@ -12,14 +12,7 @@ export class ApiService {
   constructor(
     private httpClient: HttpClient
   ) { }
-
-  getAllProjects(): Observable<ProjectList> {
-		const request = {
-			'url': AppConst.API_BASE_URL + 'launches?limit=100'
-    };
-		return this.httpClient.get<ProjectList>(request.url);
-  }
-
+  
   getProjectsWithFilters(param): Observable<ProjectList> {
 		const request = {
 			'url': AppConst.API_BASE_URL + 'launches?limit=100' + param

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-filter',
@@ -14,6 +14,7 @@ export class FilterComponent implements OnInit {
   selectedLaunch = '';
   selectedLanding = '';
 
+  @Input() filterParams: any;
   @Output() selectedFilters = new EventEmitter<any>();
 
   constructor() {
@@ -45,6 +46,14 @@ export class FilterComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    console.log('Filter Params =>', this.filterParams);
+    this.setDefaultFilter();
+  }
+
+  setDefaultFilter() {
+    this.setActiveClass('year', this.filterParams.year, true);
+    this.setActiveClass('launch', this.filterParams.launch, true);
+    this.setActiveClass('landing', this.filterParams.land, true);
   }
 
   onFilterChange(type, option, event) {
@@ -58,9 +67,6 @@ export class FilterComponent implements OnInit {
       land: this.selectedLanding,
       year: this.selectedYear
     });
-    // launch_success: this.selectedLaunch,
-    //   land_success: this.selectedLanding,
-    //   launch_year: this.selectedYear
   }
 
   setActiveClass(type, val, checked) {

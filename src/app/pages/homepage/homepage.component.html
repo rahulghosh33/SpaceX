@@ -2,7 +2,7 @@
     <app-header></app-header>
     <div class="row">
         <div class="col-sm-3">
-            <app-filter (selectedFilters)='filtersChanged($event)'></app-filter>
+            <app-filter [filterParams]="filterParams" (selectedFilters)='filtersChanged($event)'></app-filter>
         </div>
         <div class="col-sm-9">
             <ngTemplate *ngIf='stateDataReady'>
